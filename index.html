@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    // Check if the requested URL is for apple-app-site-association
+    if (window.location.pathname.includes('apple-app-site-association')) {
+      // Your apple-app-site-association JSON content
+      const content = {
+        "applinks": {
+          "apps": [],
+          "details": [
+            {
+              "appID": "TEAMID.com.example.app",
+              "paths": ["*"]
+            }
+          ]
+        }
+      };
+      
+      // Set content type and display JSON
+      document.querySelector('pre').textContent = JSON.stringify(content, null, 2);
+    }
+  </script>
+</head>
+<body>
+  <pre></pre>
+</body>
+</html>
